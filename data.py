@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def triplet_generator():
     ''' Dummy triplet generator for API usage demo only.
 
@@ -7,8 +8,15 @@ def triplet_generator():
 
     :return: a batch of (anchor, positive, negative) triplets
     '''
+
+
+
     while True:
         a_batch = np.random.rand(4, 96, 96, 3)
         p_batch = np.random.rand(4, 96, 96, 3)
         n_batch = np.random.rand(4, 96, 96, 3)
-        yield [a_batch , p_batch, n_batch], None
+        yield [a_batch, p_batch, n_batch], None
+
+# (batch_size, 96, 96, 3).
+def anchor(image_path, batch_size, width, height, chennel):
+    pass
